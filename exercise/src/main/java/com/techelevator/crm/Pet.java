@@ -41,8 +41,13 @@ public class Pet {
     public String listVaccinations() {
         String ourVaccinations = "";
         for(int i = 0; i < vaccinations.size(); i++) {
-          ourVaccinations += vaccinations.get(i);
-
+            if(i == vaccinations.size()-1){
+                ourVaccinations += vaccinations.get(i) + ".";
+            }
+            else {
+                ourVaccinations += vaccinations.get(i) + ", ";
+            }
+            //System.out.println("i=" + i + " ourVaccinations = "+ ourVaccinations);
         }
         return ourVaccinations;
 
